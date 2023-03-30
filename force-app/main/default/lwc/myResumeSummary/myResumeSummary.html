@@ -1,0 +1,15 @@
+<template>
+    <section>
+        <h2 class="slds-var-p-bottom_medium section_heading">{details.HEADING}</details></h2>
+        <div>
+            <p class="font16">{details.DESCRIPTION}</p>
+            <ul class="slds-var-p-top_medium slds-var-p-left_large summary_list slds-is-relative">
+                <template for:each={details.KEY_POINTS} for:item="item">
+                    <li key={item} class="font16">
+                        {item}   
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </section>
+</template>
