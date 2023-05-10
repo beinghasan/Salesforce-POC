@@ -1,6 +1,7 @@
 public with sharing class NewsController {
     
-    public static Map<string, object> fetchNews(){
+    @AuraEnabled(cacheable=true)
+    public static Map<string, object> getNews(){
         HttpRequest httpRequest = new HttpRequest();
         httpRequest.setEndpoint('https://newsapi.org/v2/top-headlines?country=in&apiKey=f0d7a05662b6487b8090bc0717e56407');
         httpRequest.setMethod('GET');
@@ -22,7 +23,7 @@ public with sharing class NewsController {
             throw ex;
         }
         
-        if(String.isBlank(strResponse)){
+        if(!String.isBlank(strResponse)){
             newsJsonData = (Map<String, Object>) JSON.deserializeUntyped(strResponse);
         }
         if(!newsJsonData.isEmpty()){
