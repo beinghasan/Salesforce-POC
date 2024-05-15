@@ -1,0 +1,14 @@
+<template>
+  <lightning-card>
+    <template if:true={record}>
+      <lightning-map
+        class="open-map-button"
+        map-markers={mapMarkers}
+        zoom-level={zoomLevel}
+        list-view={listView}
+        show-footer
+      >
+      </lightning-map>
+    </template>
+  </lightning-card>
+</template>

@@ -1,0 +1,8 @@
+.open-map-button {
+  --slds-c-button-brand-color-background: #dbddb7;
+  --slds-c-button-brand-color-background-hover: #a4dfbc;
+  --slds-c-button-brand-color-border: #dbddb7;
+  --slds-c-button-brand-color-border-hover: #a4dfbc;
+  /* --lwc-brandTextLink: #ffffff; */
+  /* --lwc-brandTextLinkActive: #ffffff; */
+}
