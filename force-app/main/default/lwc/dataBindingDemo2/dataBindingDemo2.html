@@ -1,0 +1,22 @@
+<!-- sldsValidatorIgnore -->
+<template>
+  <lightning-card
+    title="Data Binding Demo 2"
+    icon-name="custom:custom2"
+    variant="base"
+  >
+    <!-- Card Body  -->
+    <div class="slds-p-around_medium">
+      <p style="font-size: 50px; font-weight: bold">Hello !! {name}</p>
+      <p>This is Data Second Type Of Data Binding in LWC</p>
+      <br />
+      <lightning-input
+        name="Your Name"
+        label="Enter Your Name"
+        value={name}
+        onchange={handleChange}
+      >
+      </lightning-input>
+    </div>
+  </lightning-card>
+</template>
