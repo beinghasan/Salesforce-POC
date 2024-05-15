@@ -1,0 +1,31 @@
+<template>
+  <template if:true={mapMarkers}>
+    <article class="slds-card">
+      <div class="slds-card__body slds-card__body_inner">
+        <template if:true={isAddressFound}>
+          <lightning-map
+            map-markers={mapMarkers}
+            zoom-level={zoomLevel}
+            center={centerLocation}
+          >
+          </lightning-map>
+        </template>
+        <template if:false={isAddressFound}>
+          <lightning-map map-markers={mapMarkers} zoom-level={zoomLevel}>
+          </lightning-map>
+        </template>
+      </div>
+      <footer class="slds-card__footer">
+        <lightning-button
+          class="slds-m-top_medium slds-p-around_medium slds-p-top_medium"
+          onclick={navigateToMap}
+          label={drivingDirectionsLabel}
+          disabled={isButtonDisabled}
+          icon-name="utility:new_window"
+          icon-position="right"
+        ></lightning-button>
+      </footer>
+    </article>
+  </template>
+  <template if:false={mapMarkers}> Loading .... </template>
+</template>
