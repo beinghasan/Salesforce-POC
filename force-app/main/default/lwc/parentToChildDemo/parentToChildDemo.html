@@ -1,0 +1,14 @@
+<template>
+  <lightning-card icon-name="standard:account" variant="base">
+    <div slot="title">Parent Component</div>
+    <div class="slds-p-around_medium">
+      <!-- Card Body  -->
+      <lightning-input
+        type="text"
+        label="Enter Name"
+        onchange={handleNameChange}
+      ></lightning-input>
+    </div>
+    <c-child-component name={messageFromParent}></c-child-component>
+  </lightning-card>
+</template>
